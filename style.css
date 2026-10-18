@@ -171,8 +171,8 @@
 
 /* Academic Life refresh: legible timelines and a warm editorial identity */
 .academic-hero{position:relative;isolation:isolate;padding-bottom:3.75rem}
-.academic-hero:before{content:"";position:absolute;right:0;top:3rem;width:clamp(95px,16vw,210px);height:clamp(95px,16vw,210px);border-radius:50%;background:#e3eee5;z-index:-1}
-.academic-hero:after{content:"✳";position:absolute;right:clamp(28px,7vw,105px);top:clamp(4rem,9vw,8rem);font-size:clamp(2.6rem,6vw,5rem);line-height:1;color:#b07865;z-index:-1}
+
+
 .academic-hero .inside-kicker{color:#9b6754;opacity:1;font-size:.83rem;letter-spacing:.12em}
 .academic-hero h1{color:#29493b;letter-spacing:-.045em}
 .academic-hero>p:not(.inside-kicker){max-width:67ch}
@@ -197,8 +197,8 @@
 .academic-hero~.study-section .study-body>h3:first-child{margin-top:0}
 .academic-hero~.study-section .academic-note{border-left:3px solid #c8876d;background:#f4eee6;padding:1rem 1.25rem;margin-top:2rem}
 @media(max-width:690px){
-  .academic-hero:before{width:80px;height:80px;top:2rem;opacity:.65}
-  .academic-hero:after{top:3.2rem;right:22px;font-size:2rem}
+  
+  
   .academic-hero~.study-section .theme-block,
   .academic-hero~.study-section .paper-list li{grid-template-columns:minmax(5.6rem,6.5rem) minmax(0,1fr);gap:1rem;padding:1.2rem 0}
   .academic-hero~.study-section .theme-index,
@@ -233,5 +233,11 @@
 .brand-logo { display:block; width:auto; height:46px; max-width:70px; object-fit:contain; }
 @media (max-width:600px) { .brand-logo { height:39px; } }
 
-/* Academic Life: remove obsolete decorative bubble and starburst */
-.academic-hero::before, .academic-hero::after { content: none !important; display: none !important; }
+
+
+/* Academic page: custom healthcare analytics motif; no starburst or colored bubble */
+.academic-hero{position:relative;isolation:isolate;padding-right:clamp(13rem,26vw,20rem)}
+.academic-data-art{position:absolute;right:0;top:clamp(2.8rem,6vw,5rem);width:clamp(180px,22vw,270px);pointer-events:none;z-index:0}
+.academic-data-art svg{display:block;width:100%;height:auto}
+.academic-hero>.inside-kicker,.academic-hero>h1,.academic-hero>p,.academic-hero>.inside-nav{position:relative;z-index:1}
+@media(max-width:800px){.academic-hero{padding-right:0}.academic-data-art{position:relative;right:auto;top:auto;width:min(270px,70%);margin:1.5rem 0 0 auto}}
