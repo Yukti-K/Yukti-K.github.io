@@ -232,3 +232,6 @@
 .wordmark { display:inline-flex; align-items:center; justify-content:center; flex:0 0 auto; line-height:1; letter-spacing:normal; }
 .brand-logo { display:block; width:auto; height:46px; max-width:70px; object-fit:contain; }
 @media (max-width:600px) { .brand-logo { height:39px; } }
+
+/* Academic Life: remove obsolete decorative bubble and starburst */
+.academic-hero::before, .academic-hero::after { content: none !important; display: none !important; }
